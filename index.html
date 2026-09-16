@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy &amp; Terms - Arrow Move: Escape Puzzle | HIDE store</title>
+    <style>
+        :root {
+            --bg-page: #FBFBFC;
+            --bg-card: #FFFFFF;
+            --text-primary: #111827;
+            --text-secondary: #4B5563;
+            --text-muted: #9CA3AF;
+            --accent-orange: #FF5E00;
+            --accent-gradient: linear-gradient(135deg, #FF5E00 0%, #FFA000 100%);
+            --orange-soft: rgba(255, 94, 0, 0.08);
+            --border-subtle: #E5E7EB;
+            --shadow-elevation: 0 12px 30px -10px rgba(17, 24, 39, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+
+        /* NAVIGATION BAR */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 14px 20px;
+        }
+
+        .nav-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .publisher-tag {
+            background: var(--text-primary);
+            color: #FFFFFF;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO HEADER */
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--orange-soft);
+            border: 1px solid rgba(255, 94, 0, 0.3);
+            color: var(--accent-orange);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            letter-spacing: -0.8px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-meta {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 720px;
+            margin: 0 auto 24px;
+        }
+
+        /* APP METADATA BOX */
+        .metadata-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-elevation);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            text-align: left;
+        }
+
+        .meta-cell span.label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .meta-cell span.value {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 700;
+            word-break: break-all;
+        }
+
+        /* PERMISSIONS & DATA SAFETY HIGHLIGHT (CRITICAL STATEMENT) */
+        .highlight-card {
+            background: #FFF9F5;
+            border: 1.5px solid var(--accent-orange);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(255, 94, 0, 0.05);
+        }
+
+        .highlight-card h3 {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-card p {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            margin-bottom: 16px;
+        }
+
+        .permission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .permission-table th, .permission-table td {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        .permission-table th {
+            background: #F9FAFB;
+            color: var(--text-primary);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .permission-table td {
+            border-bottom: 1px solid #F3F4F6;
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+
+        .permission-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .perm-badge {
+            background: #F3F4F6;
+            color: var(--text-primary);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* CONTENT CARDS */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 22px;
+            padding: 34px;
+            margin-bottom: 26px;
+            box-shadow: var(--shadow-elevation);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--orange-soft);
+            color: var(--accent-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.3rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 22px 0 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .legal-quote {
+            background: #F9FAFB;
+            border-left: 4px solid var(--accent-orange);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 30px 20px 0;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer strong {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .content-card { padding: 22px; }
+            .nav-links { display: none; }
+            .permission-table, .permission-table tbody, .permission-table tr, .permission-table td, .permission-table th {
+                display: block;
+            }
+            .permission-table tr { margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); }
+            .permission-table td { padding: 8px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY TOP NAVBAR -->
+    <nav class="top-nav">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+                🏹 Arrow Move <span class="publisher-tag">HIDE store</span>
+            </a>
+            <div class="nav-links">
+                <a href="#overview">Game Details</a>
+                <a href="#permissions">Permissions &amp; Safety</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- HERO SECTION -->
+        <header class="hero">
+            <div class="status-badge">Official Legal &amp; Data Safety Portal</div>
+            <h1>ARROW MOVE: <span>ESCAPE PUZZLE</span></h1>
+            <p class="hero-meta">
+                Tap, move arrows &amp; clear the maze! A smart, procedural offline brain puzzle engineered by <strong>Rohit Yadav</strong> and published by <strong>HIDE store</strong>.
+            </p>
+        </header>
+
+        <!-- OFFICIAL APPLICATION METADATA -->
+        <div id="overview" class="metadata-box">
+            <div class="meta-cell">
+                <span class="label">Official App Title</span>
+                <span class="value">Arrow Move: Escape Puzzle</span>
+            </div>
+            <div class="meta-cell">
+                <span class="label">Package Identifier</span>
+                <span class="value">com.arrowpuzzlegame.byrohityadav</span>
+            </div>
+            <div class="meta-cell">
+                <span class="label">Brand &amp; Publisher</span>
+                <span class="value">HIDE store</span>
+            </div>
+            <div class="meta-cell">
+                <span class="label">Lead Developer</span>
+                <span class="value">Rohit Yadav</span>
+            </div>
+            <div class="meta-cell">
+                <span class="label">App Version / Year</span>
+                <span class="value">Version 1.0 (2026 Production)</span>
+            </div>
+            <div class="meta-cell">
+                <span class="label">Compliance Engine</span>
+                <span class="value">Google Play Data Safety Certified</span>
+            </div>
+        </div>
+
+        <!-- PERMISSION DISCLOSURE & SYSTEM ACCESS (THE TRANSPARENCY BOX) -->
+        <div id="permissions" class="highlight-card">
+            <h3>🔒 Complete Device Permission &amp; Usage Disclosures</h3>
+            <p>
+                In strict adherence to Google Play Store policies, <strong>Arrow Move: Escape Puzzle</strong> only requests technical permissions necessary for gameplay execution, local save management, and advertising display. <strong>We do not harvest or transmit personal identity data.</strong>
+            </p>
+
+            <table class="permission-table">
+                <thead>
+                    <tr>
+                        <th style="width: 32%;">Permission Name</th>
+                        <th style="width: 28%;">Type / Category</th>
+                        <th style="width: 40%;">Exact Purpose &amp; Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="perm-badge">Internal Device Storage</span><br><small>(SQLite &amp; SharedPreferences)</small></td>
+                        <td>Local Data Storage</td>
+                        <td>Exclusively utilized to store your level completion records, current tier, coin balance, custom avatar selection, and board preferences locally on your phone. No personal device files are accessed.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="perm-badge">android.permission.INTERNET</span></td>
+                        <td>Network Access</td>
+                        <td>Used solely to connect with Google AdMob to deliver advertisements and verify internet availability for rewarded items and daily challenges.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="perm-badge">ACCESS_NETWORK_STATE</span></td>
+                        <td>Network Diagnostic</td>
+                        <td>Detects whether the device is currently online or offline to ensure smooth offline gameplay without unnecessary network errors.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="perm-badge">android.permission.VIBRATE</span></td>
+                        <td>Haptic Hardware</td>
+                        <td>Triggers brief, tactile vibration feedback when arrows move, hit obstacles, or solve puzzles. Can be toggled ON/OFF anytime in the Settings menu.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 1. OFFICIAL PRIVACY POLICY -->
+        <section id="privacy" class="content-card">
+            <div class="card-header">
+                <div class="header-icon">🛡️</div>
+                <div class="card-title">Official Privacy Policy</div>
+            </div>
+
+            <p><em>Last Revised &amp; Certified: September 2026 • Published by <strong>HIDE store</strong></em></p>
+            <p>
+                This Privacy Policy governs the manner in which <strong>HIDE store</strong> and lead developer <strong>Rohit Yadav</strong> manage user privacy in <strong>Arrow Move: Escape Puzzle</strong> (<code>com.arrowpuzzlegame.byrohityadav</code>).
+            </p>
+
+            <div class="legal-quote">
+                "Our fundamental principle: We do not collect, store, sell, or transfer your personal identity data. Your puzzle journey remains your own."
+            </div>
+
+            <h4>1. Zero Personal Identifiable Information (PII) Collection</h4>
+            <p>
+                Arrow Move: Escape Puzzle is architected as an <strong>offline-first</strong> logic puzzle application. We do NOT require, track, or collect:
+            </p>
+            <ul>
+                <li><strong>No Personal Identifiers:</strong> We do not ask for your real name, email address, physical address, or mobile number.</li>
+                <li><strong>No Sensitive Hardware Access:</strong> We never request access to your Contacts, Camera, Microphone, SMS, or precise GPS Location.</li>
+                <li><strong>No Account Mandatory:</strong> You do not need to register an account or create login credentials to enjoy the complete game.</li>
+            </ul>
+
+            <h4>2. Strict Prohibition on Third-Party Data Sharing</h4>
+            <p>
+                We do NOT sell, trade, rent, or transfer user information to data brokers, analytics marketing firms, or unrelated third parties. All puzzle progress remains strictly confined to your physical hardware.
+            </p>
+
+            <h4>3. Third-Party Advertising (Google AdMob 2026 Integration)</h4>
+            <p>
+                To provide free gameplay, the application integrates <strong>Google AdMob</strong> (Google LLC) to display advertisements. Google AdMob may automatically collect and use non-sensitive, pseudonymous device identifiers (such as the Google Advertising ID) in compliance with Google Play Developer policies:
+            </p>
+            <ul>
+                <li>Identifiers are utilized solely for ad frequency capping, fraud prevention, and delivering non-intrusive ads.</li>
+                <li>You can reset your Advertising ID or opt-out of personalized interest-based ads anytime via: <br><em>Android Settings &gt; Google &gt; Ads &gt; Delete or Reset Advertising ID</em>.</li>
+                <li>Review Google's official privacy commitments: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--accent-orange); font-weight: bold; text-decoration: none;">Google Privacy &amp; Terms Policy</a>.</li>
+            </ul>
+
+            <h4>4. Children’s Privacy &amp; Family Safety (COPPA Compliance)</h4>
+            <p>
+                Arrow Move: Escape Puzzle complies fully with the Children’s Online Privacy Protection Act (COPPA) and Google Play Families Policy. We do not intentionally harvest data from children under 13.
+            </p>
+
+            <h4>5. Data Retention &amp; Player Deletion Rights</h4>
+            <p>
+                Since your puzzle progress, coins, and records are stored locally via SQLite, you have complete control over your data:
+            </p>
+            <ul>
+                <li><strong>In-Game Reset:</strong> You can reset all progress, levels, and coins anytime from <em>Settings &gt; Reset All Game Progress</em>.</li>
+                <li><strong>Uninstall Deletion:</strong> Uninstalling the application completely erases all local save files from your device immediately.</li>
+            </ul>
+        </section>
+
+        <!-- 2. TERMS AND CONDITIONS -->
+        <section id="terms" class="content-card">
+            <div class="card-header">
+                <div class="header-icon">📜</div>
+                <div class="card-title">Terms &amp; Conditions (EULA)</div>
+            </div>
+
+            <p>
+                By downloading, installing, or playing <strong>Arrow Move: Escape Puzzle</strong>, you enter into a binding agreement with <strong>HIDE store</strong> and agree to the following terms:
+            </p>
+
+            <h4>1. License Grant</h4>
+            <p>
+                HIDE store grants you a limited, personal, non-commercial, revocable license to play the game on certified Android devices.
+            </p>
+
+            <h4>2. Intellectual Property Rights</h4>
+            <p>
+                All software code, 90-degree orthogonal movement algorithms, procedural level generation algorithms, rope-straightening animation physics, graphics, and branding are the exclusive intellectual property of <strong>Rohit Yadav</strong> and <strong>HIDE store</strong>.
+            </p>
+
+            <h4>3. Virtual In-Game Currencies</h4>
+            <p>
+                Coins, hints, and boosters earned or purchased in the application are virtual entertainment elements. They possess no real-world monetary value and cannot be exchanged, transferred, or refunded for legal tender.
+            </p>
+
+            <h4>4. Disclaimer of Warranties</h4>
+            <p>
+                The game is provided "AS IS" and "AS AVAILABLE" without express or implied warranties. While every generated level is algorithmically verified to be 100% solvable, HIDE store does not warrant uninterrupted or error-free gameplay across all custom Android ROMs.
+            </p>
+        </section>
+
+        <!-- 3. CONTACT & STUDIO SUPPORT -->
+        <section id="contact" class="content-card">
+            <div class="card-header">
+                <div class="header-icon">✉️</div>
+                <div class="card-title">Developer &amp; Publisher Contact</div>
+            </div>
+
+            <p>
+                For questions regarding this Privacy Policy, permission handling, or technical support, please contact the publisher team directly:
+            </p>
+
+            <ul>
+                <li><strong>Game Title:</strong> Arrow Move: Escape Puzzle</li>
+                <li><strong>Package Name:</strong> com.arrowpuzzlegame.byrohityadav</li>
+                <li><strong>Publisher &amp; Brand:</strong> HIDE store</li>
+                <li><strong>Lead Developer:</strong> Rohit Yadav</li>
+                <li><strong>Direct Support Email:</strong> <a href="mailto:support@example.com" style="color: var(--accent-orange); font-weight: bold; text-decoration: none;">support@example.com</a></li>
+                <li><strong>Region:</strong> India</li>
+            </ul>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 <strong>Arrow Move: Escape Puzzle</strong>. Published by <strong>HIDE store</strong>. Developed by <strong>Rohit Yadav</strong>. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
